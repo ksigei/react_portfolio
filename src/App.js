@@ -1,17 +1,17 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Main from './components/Main';
+
 function App() {
   return (
-    <div className="App">
-      <section className="section">
-        <div className="container">
-          <h1 className="title">Hello World</h1>
-          <p className="subtitle">
-            My first website with
-            {' '}
-            <strong>Bulma</strong>
-            !
-          </p>
-        </div>
-      </section>
+    <div>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
